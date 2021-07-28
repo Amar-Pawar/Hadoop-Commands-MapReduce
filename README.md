@@ -31,3 +31,38 @@ $ hadoop fs -cat /sample/data.txt
 
 ### To remove directory
 $ hadoop fs -rm -r /Sample/PracticeSample
+
+
+# WORD COUNT PROGRAM
+
+### Create a text file in your local machine and add text into it.
+nano data.txt
+cat > data.txt
+
+### Create a directory in HDFS, where to kept text file.
+$hadoop fs -mkdir /Sample
+
+### Add data.txt on HDFS
+$ Hadoop fs -put ~/Documents/hadoop_practice/data.txt /Sample
+
+### Write a map reduce code in python.
+Note:-There should be seperate files mapper.py, reducer.py
+
+To run this program we have to download hadoop streaming jar
+For specified version of hadoop
+
+Run the code through terminal with following command
+
+Note:- Here we have to explicitly call python before
+Mapper and reducer as framework itself does not
+Know how to run mapper and reducer.
+
+$ hadoop jar /home/ubuntu/Documents/hadoop_practice/
+hadoop-streaming-3.3.1.jar
+-file ~/Documents/HadoopWorkspace/Hadoop/MapReducePrograms/WordCount/word_count_mapper.py
+-mapper word_count_mapper.py
+-file ~/Documents/HadoopWorkspace/Hadoop/MapReducePrograms/WordCount/word_count_reducer.py
+-reducer word_count_reducer.py
+-input /Sample/PracticeSample/data.txt 
+-output /output2
+	
