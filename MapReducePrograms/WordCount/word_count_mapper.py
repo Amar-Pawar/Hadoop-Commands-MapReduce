@@ -1,3 +1,12 @@
+'''
+/**********************************************************************************
+@Author: Amar Pawar
+@Date: 2021-07-27
+@Last Modified by: Amar Pawar
+@Last Modified time: 2021-07-27
+@Title : Mapper code for word count program
+/**********************************************************************************
+'''
 #!/usr/bin/env python3
   
 # import sys because we need to read and write data to STDIN and STDOUT
