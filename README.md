@@ -39,6 +39,12 @@ $ hadoop fs -rm -r /Sample/PracticeSample
 nano data.txt
 cat > data.txt
 
+### start all hadoop deamons
+$ start-all.sh
+
+### check the running status
+$ jps
+
 ### Create a directory in HDFS, where to kept text file.
 $hadoop fs -mkdir /Sample
 
